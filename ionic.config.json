@@ -1,0 +1,7 @@
+{
+  "name": "Topic5-Geolocation",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
