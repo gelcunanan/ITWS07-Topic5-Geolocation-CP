@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Geolocation</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header color="secondary">
+      <ion-card-title>{{address()}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-margin-top">
+      <div id="map"></div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title style="font-size: .8rem;">
+      Lat: {{ lat | number:'1.4-4' }} <br />
+      Longitude: {{ long | number:'1.4-4' }}
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
